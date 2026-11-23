@@ -1,0 +1,46 @@
+@model Evento
+@{
+    ViewData["Title"] = "Novo evento";
+}
+<h1>Cadastrar novo evento </h1>
+<div asp-validation-summary="All" class="erro"></div>
+
+<form asp-action="Criar" method="post">
+    <p>
+        <label asp-for="Id"></label><br />
+        <input asp-for="Id" />
+        <span asp-validation-for="Id" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="Nome"></label><br />
+        <input asp-for="Nome" />
+        <span asp-validation-for="Nome" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="Descricao"></label><br />
+        <input asp-for="Descricao" />
+        <span asp-validation-for="Descricao" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="Local"></label><br />
+        <input asp-for="Local" />
+        <span asp-validation-for="Local" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="DataEvento"></label><br />
+        <input asp-for="DataEvento" />
+        <span asp-validation-for="DataEvento" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="QuantidadeVagas"></label><br />
+        <input asp-for="QuantidadeVagas" />
+        <span asp-validation-for="QuantidadeVagas" class="erro"></span>
+    </p>
+    <p>
+        <label asp-for="ValorIngresso"></label><br />
+        <input asp-for="ValorIngresso" />
+        <span asp-validation-for="ValorIngresso" class="erro"></span>
+    </p>
+    <button type="submit">Salvar</button>
+
+</form>
